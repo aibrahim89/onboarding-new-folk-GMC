@@ -11,6 +11,11 @@ terraform {
       version = "~> 3.0"
     }
   }
+  backend "s3" {
+    bucket = "dataplatform-dev-statefiles"
+    key    = "test/onboarding-new-folk-GMC_stack.tfstate"
+    region = "us-east-1"
+  }
 }
 
 
